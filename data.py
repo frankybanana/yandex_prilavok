@@ -1,6 +1,4 @@
-# data.py
-
-# Заголовки без токена (для создания пользователя)
+# Заголовок для создания пользователя
 headers_user = {
     "Content-Type": "application/json"
 }
@@ -12,37 +10,37 @@ user_body = {
     "address": "г. Казань, ул. Пушкина, д. 10"
 }
 
-# ===== 11 ВАРИАНТОВ KIT_BODY =====
+# Данные наборов
 
-# 1. 1 символ
-kit_body_1 = {"name": "a"}
+# Допустимое количество символов (1)
+kit_body_1_min_1_char = {"name": "a"}
 
-# 2. 511 символов (длинное имя)
-kit_body_2 = {"name": "AbcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdAbcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabC"}
+# Допустимое количество символов (511)
+kit_body_2_max_511_chars = {"name": "AbcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdAbcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabC"}
 
-# 3. Пустое имя
-kit_body_3 = {"name": ""}
+# Количество символов меньше допустимого (0)
+kit_body_3_empty_name = {"name": ""}
 
-# 4. 512 символов
-kit_body_4 = {"name": "AbcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdAbcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcD"}
+# Количество символов больше допустимого (512)
+kit_body_4_512_chars = {"name": "AbcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdAbcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcD"}
 
-# 5. Английское имя
-kit_body_5 = {"name": "QWErty"}
+# Разрешены английские буквы
+kit_body_5_english = {"name": "QWErty"}
 
-# 6. Русское имя
-kit_body_6 = {"name": "Мария"}
+# Разрешены русские буквы
+kit_body_6_russian = {"name": "Мария"}
 
-# 7. Спецсимволы
-kit_body_7 = {"name": "№%@,"}
+# Разрешены спецсимволы
+kit_body_7_special_chars = {"name": "№%@,"}
 
-# 8. С пробелами
-kit_body_8 = {"name": " Человек и КО "}
+# Разрешены пробелы
+kit_body_8_spaces = {"name": " Человек и КО "}
 
-# 9. Только цифры
-kit_body_9 = {"name": "123"}
+# Разрешены цифры
+kit_body_9_only_numbers = {"name": "123"}
 
-# 10. Пустой словарь
-kit_body_10 = {}
+# Параметр не передан в запросе
+kit_body_10_no_name = {}
 
-# 11. Число вместо строки
-kit_body_11 = {"name": 123}
+# Передан другой тип параметра (число)
+kit_body_11_number_instead_string = {"name": 123}

@@ -1,5 +1,3 @@
-# sender_stand_request.py
-
 import requests
 import configuration
 import data
@@ -12,7 +10,6 @@ def post_new_user(body):
 
 def post_new_kit(auth_token, kit_body):
     """Создание набора с токеном авторизации"""
-    # Заголовки с токеном создаем внутри функции
     headers_with_auth = {
         "Content-Type": "application/json",
         "Authorization": f"Bearer {auth_token}"
