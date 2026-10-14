@@ -53,6 +53,7 @@
 
 ```bash
 pip install pytest requests
+```
 
 ## Запуск тестов
 
@@ -60,3 +61,4 @@ pip install pytest requests
 
 ```bash
 pytest create_kit_name_kit_test.py
+```
